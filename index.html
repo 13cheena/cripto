@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шифратор / Дешифратор</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <button id="themeToggle">🌓 Тёмная тема</button>
+        <h1>Шифратор / Дешифратор</h1>
+        
+        <div class="input-section">
+            <textarea id="inputText" placeholder="Введите текст..."></textarea>
+            <textarea id="outputText" placeholder="Результат..." readonly></textarea>
+        </div>
+
+        <div class="controls">
+            <select id="cipherType">
+                <option value="morse">Код Морзе</option>
+                <option value="caesar">Шифр Цезаря</option>
+                <option value="vigenere">Шифр Виженера</option>
+                <option value="atbash">Шифр Атбаш</option>
+            </select>
+
+            <div id="keyInput" style="display: none;">
+                <label for="key">Ключ:</label>
+                <input type="text" id="key" placeholder="Введите ключ">
+            </div>
+
+            <div id="shiftInput" style="display: block;">
+                <label for="shift">Сдвиг:</label>
+                <input type="number" id="shift" value="3" min="1" max="33">
+            </div>
+
+            <div class="buttons">
+                <button id="encryptBtn">Зашифровать</button>
+                <button id="decryptBtn">Дешифровать</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
